@@ -39,7 +39,7 @@ const App = () => {
       },
     ],
     {
-      basename: "/campervan-rent/",
+      basename: "/campervan-rent",
     }
   );
 
