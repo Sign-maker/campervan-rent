@@ -1,6 +1,4 @@
-# React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An application for a company that provides camper van rental services in Ukraine
 
 Currently, two official plugins are available:
 
