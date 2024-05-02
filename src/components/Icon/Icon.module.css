@@ -1,5 +1,5 @@
-.icon-dark {
-  fill: black;
+.icon-main {
+  fill: var(--main-101828);
 }
 .icon-red {
   fill: red;

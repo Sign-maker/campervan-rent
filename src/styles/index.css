@@ -1,1 +1,98 @@
+/* @import-normalize; */
+@import url(./reset.css);
 
+@font-face {
+  font-family: "Inter";
+  src: url("./fonts/Inter-Medium.woff2") format("woff2"),
+    url("./fonts/Inter-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("./fonts/Inter-Regular.woff2") format("woff2"),
+    url("./fonts/Inter-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("./fonts/Inter-SemiBold.woff2") format("woff2"),
+    url("./fonts/Inter-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  /* colors */
+  --main-101828: #101828;
+  --text-475467: #475467;
+  --button-E44848: #e44848;
+  --rating-FFC531: #ffc531;
+  --block-features-F2F4F7: #f2f4f7;
+  --input-F7F7F7: #f7f7f7;
+  --white: #ffffff;
+
+  /* fonts */
+  --font-family: "Inter", sans-serif;
+
+  /* transition params */
+  --my-transition-duration: 250ms;
+  --my-transition-timing-function: ease-in-out;
+  --my-transition-delay: 250ms;
+  --my-cubic-bezier: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family);
+  color: var(--text-475467);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/* ===================CONTAINER================*/
+
+.container {
+  margin: 0 auto;
+  width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+  /* outline: 1px solid red; */
+}
+@media (min-width: 320px) {
+  .container {
+    max-width: 320px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+@media (min-width: 1440px) {
+  .container {
+    max-width: 1280px;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}

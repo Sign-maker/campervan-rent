@@ -5,7 +5,7 @@ export const Icon = ({
   iconName,
   width = "20",
   height = "20",
-  className = "icon-dark",
+  className = "icon-main",
 }) => {
   return (
     <svg width={width} height={height} className={css[className]}>
