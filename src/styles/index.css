@@ -33,6 +33,7 @@
   --main-101828: #101828;
   --text-475467: #475467;
   --button-E44848: #e44848;
+  --button-accent-D84343: #d84343;
   --rating-FFC531: #ffc531;
   --block-features-F2F4F7: #f2f4f7;
   --input-F7F7F7: #f7f7f7;
@@ -70,12 +71,11 @@ body {
 
 /* ===================CONTAINER================*/
 
-.container {
+/* .container {
   margin: 0 auto;
   width: 100%;
   padding-left: 20px;
   padding-right: 20px;
-  /* outline: 1px solid red; */
 }
 @media (min-width: 320px) {
   .container {
@@ -95,4 +95,26 @@ body {
     padding-left: 32px;
     padding-right: 32px;
   }
+} */
+
+.container {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1440px;
+  padding-left: 64px;
+  padding-right: 64px;
+}
+
+nav a.active {
+  color: var(--button-accent-D84343);
+}
+
+nav a.active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: var(--button-accent-D84343);
 }
