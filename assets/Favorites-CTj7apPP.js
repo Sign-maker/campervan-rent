@@ -1,0 +1,1 @@
+import{j as s}from"./index-CwFKOQGC.js";import{u as a,C as t}from"./CarList-7C5dBk4N.js";const i=()=>{const{favoriteCars:r}=a();return s.jsxs("section",{children:[s.jsx("h2",{className:"visually-hidden",children:"Favorite Cars"}),r.length>0?s.jsx(t,{showFavorites:!0}):s.jsx("p",{children:"No data"})]})};export{i as default};
