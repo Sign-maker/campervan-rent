@@ -12,23 +12,7 @@
   margin-bottom: 32px;
 }
 
-.imgWrapper {
-  flex: 0 0 290px;
-  height: 310px;
-  border-radius: 10px;
-  overflow: hidden;
-  background-image: url("../../assets/images/imgplaceholder.png");
-  background-position: center;
-  background-size: cover;
-}
-
-.imgWrapper img {
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
-}
-
-.descrWrapper {
+.infoWrapper {
   flex: 1;
 }
 
@@ -45,22 +29,13 @@
   gap: 11px;
 }
 
-.favoriteBtn {
-  background-color: transparent;
-}
-
 .statsWrapper {
   display: flex;
   gap: 16px;
   margin-bottom: 24px;
 }
 
-.description {
-  overflow: hidden;
-  max-width: 525px;
-  line-height: 150%;
-  white-space: nowrap;
-  text-overflow: ellipsis;
+.descrWrapper {
   margin-bottom: 24px;
 }
 

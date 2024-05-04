@@ -1,0 +1,10 @@
+.description {
+  line-height: 150%;
+}
+
+.short {
+  overflow: hidden;
+  max-width: 525px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}

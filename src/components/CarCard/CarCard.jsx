@@ -1,6 +1,5 @@
 import { useState } from "react";
 import css from "./CarCard.module.css";
-import { Icon } from "../Icon/Icon";
 import { useCars } from "../../hooks/useCars";
 import { CarFeatureList } from "../CarFeatureList/CarFeatureList";
 import { Button } from "../Button/Button";
@@ -11,6 +10,8 @@ import { Price } from "../Price/Price";
 import { Title } from "../Title/Title";
 import { RatingWithReviews } from "../RatingWithReviews/RatingWithReviews";
 import { Location } from "../Location/Location";
+import { Description } from "../Description/Description";
+import { FavoriteButton } from "../FavoriteButton/FavoriteButton";
 
 export const CarCard = ({ car }) => {
   const [showCarDetails, setShowCarDetails] = useState(false);
@@ -38,27 +39,15 @@ export const CarCard = ({ car }) => {
     <li className={css.item}>
       <CarGallery name={name} gallery={gallery} countToShow={1} />
 
-      <div className={css.descrWrapper}>
+      <div className={css.infoWrapper}>
         <div className={css.titleWrapper}>
           <Title title={name} short />
           <div className={css.priceWrapper}>
             <Price price={price} />
-            <button
-              className={css.favoriteBtn}
-              type="button"
+            <FavoriteButton
+              isFavorite={isFavorite}
               onClick={handleFavoriteClick}
-            >
-              {isFavorite ? (
-                <Icon
-                  iconName="icon-heart-red"
-                  width="24"
-                  height="24"
-                  className="icon-red"
-                />
-              ) : (
-                <Icon iconName="icon-heart-black" width="24" height="24" />
-              )}
-            </button>
+            />
           </div>
         </div>
 
@@ -67,7 +56,9 @@ export const CarCard = ({ car }) => {
           <Location location={location} />
         </div>
 
-        <p className={css.description}>{description}</p>
+        <div className={css.descrWrapper}>
+          <Description description={description} short />
+        </div>
 
         <div className={css.futureListWrapper}>
           <CarFeatureList car={car} shortView />
@@ -77,7 +68,7 @@ export const CarCard = ({ car }) => {
 
         {showCarDetails && (
           <Modal onClose={handleShowDetails}>
-            <CarDetails onClose={handleShowDetails} />
+            <CarDetails onClose={handleShowDetails} car={car} />
           </Modal>
         )}
       </div>

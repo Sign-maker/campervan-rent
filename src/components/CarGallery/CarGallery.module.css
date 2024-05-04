@@ -1,16 +1,16 @@
 .gallery {
   display: flex;
   gap: 16px;
-  flex-basis: calc ((100% - 32px) /3);
 }
 .imgWrapper {
-  flex: 0 0 290px;
+  width: 290px;
   height: 310px;
   border-radius: 10px;
   overflow: hidden;
   background-image: url("../../assets/images/imgplaceholder.png");
   background-position: center;
   background-size: cover;
+  box-shadow: 2px 2px 12px -3px rgba(66, 68, 90, 0.54);
 }
 
 .imgWrapper img {

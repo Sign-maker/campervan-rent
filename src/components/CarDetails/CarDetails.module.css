@@ -4,6 +4,8 @@
   width: 982px;
   position: relative;
   border-radius: 20px;
+  overflow-y: auto;
+  max-height: calc(90vh - calc(90vh - 90%));
 }
 .closeBtn {
   background-color: transparent;
@@ -17,4 +19,26 @@
 
 .closeIcon {
   color: var(--main-101828);
+}
+
+.titleWrapper {
+  margin-bottom: 8px;
+}
+
+.statsWrapper {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.priceWrapper {
+  margin-bottom: 24px;
+}
+
+.galleryWrapper {
+  margin-bottom: 24px;
+}
+
+.descrWrapper {
+  margin-bottom: 44px;
 }
