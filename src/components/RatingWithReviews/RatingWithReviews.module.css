@@ -1,0 +1,12 @@
+.raitingWrapper {
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+}
+.ratingDescr {
+  line-height: 150%;
+  color: var(--main-101828);
+}
+
+.star {
+  color: var(--rating-FFC531);
+}

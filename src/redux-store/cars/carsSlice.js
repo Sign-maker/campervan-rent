@@ -16,6 +16,12 @@ export const carSlice = createSlice({
   name: "cars",
   initialState: initState,
   reducers: {
+    addToFavorite: (state, { payload }) => {
+      state.favorites = [...state.favorites, payload];
+    },
+    removeFromFavorite: (state, { payload }) => {
+      state.favorites = state.favorites.filter((car) => car._id !== payload);
+    },
     resetCars: (state) => {
       state.campers = initState.campers;
       state.totalPages = initState.totalPages;

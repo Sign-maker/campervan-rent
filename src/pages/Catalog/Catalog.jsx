@@ -1,15 +1,33 @@
 import { useEffect, useState } from "react";
 import { useCars } from "../../hooks/useCars";
+import { CarList } from "../../components/CarList/CarList";
+import { Button } from "../../components/Button/Button";
+import css from "./Catalog.module.css";
+import { toast } from "react-toastify";
 
 const Catalog = () => {
-  const { totalPages, fetchCars, resetCars, isLoading } = useCars();
+  const { cars, totalPages, fetchCars, resetCars, isLoading } = useCars();
   const [loadMore, setLoadMore] = useState(false);
   const [page, setPage] = useState(1);
 
   useEffect(() => {
     const abortController = new AbortController();
     const signal = abortController.signal;
-    fetchCars({ params: { page }, signal });
+    const fetchData = async () => {
+      try {
+        await fetchCars({ params: { page }, signal });
+        if (page > 1) {
+          window.scrollBy({
+            top: 384,
+            behavior: "smooth",
+          });
+        }
+      } catch (error) {
+        toast.error("Ooops.. something went wrong!");
+      }
+    };
+
+    fetchData();
 
     return () => {
       abortController.abort();
@@ -31,11 +49,26 @@ const Catalog = () => {
   };
 
   return (
-    <div>
-      Catalog
-      {isLoading && <p>...Loading</p>}
-      {loadMore && <button onClick={handleClick}>load more</button>}
-    </div>
+    <section>
+      <div className="container">
+        <div className={css.content}>
+          <h2 className="visually-hidden">Campers catalog</h2>
+          {cars.length > 0 ? <CarList /> : !isLoading && <p>No data</p>}
+          {loadMore && (
+            <div className={css.btnWrapper}>
+              <Button
+                styleType="loadMore"
+                loading={isLoading}
+                onClick={handleClick}
+              >
+                Load more
+              </Button>
+            </div>
+          )}
+          {isLoading && <p>...Loading Cars</p>}
+        </div>
+      </div>
+    </section>
   );
 };
 

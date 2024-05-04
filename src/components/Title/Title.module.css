@@ -1,0 +1,12 @@
+.title {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 125%;
+  color: var(--main-101828);
+}
+.short {
+  max-width: 350px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}

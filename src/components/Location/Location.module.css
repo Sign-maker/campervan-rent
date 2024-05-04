@@ -1,0 +1,9 @@
+.locationWrapper {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.locationDescr {
+  line-height: 150%;
+  color: var(--main-101828);
+}

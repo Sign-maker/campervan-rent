@@ -1,0 +1,11 @@
+.featuteItem {
+  padding: 12px 18px;
+  font-weight: 500;
+  line-height: 125%;
+  border-radius: 25px;
+  background-color: var(--block-features-F2F4F7);
+  color: var(--main-101828);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
