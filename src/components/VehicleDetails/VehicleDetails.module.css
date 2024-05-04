@@ -1,0 +1,22 @@
+.title {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 120%;
+  color: var(--main-101828);
+  padding-bottom: 24px;
+  border-bottom: 1px solid rgba(16, 24, 40, 0.1);
+  margin-bottom: 24px;
+}
+
+.item {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 133%;
+  color: var(--main-101828);
+  display: flex;
+  justify-content: space-between;
+}
+
+.item:not(:last-child) {
+  margin-bottom: 14px;
+}

@@ -75,20 +75,3 @@ export const CarCard = ({ car }) => {
     </li>
   );
 };
-
-// import { Rating, Star } from "@smastrom/react-rating";
-// import "@smastrom/react-rating/style.css";
-
-// const myStyles = {
-//   itemShapes: Star,
-//   activeFillColor: "#ffc531",
-//   inactiveFillColor: "#f2f4f7",
-// };
-
-// <Rating
-//   style={{ maxWidth: 96 }}
-//   value={rating}
-//   spaceBetween="small"
-//   readOnly
-//   itemStyles={myStyles}
-// />;

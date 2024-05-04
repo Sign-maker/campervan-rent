@@ -1,0 +1,39 @@
+/* .tabWrapper {
+} */
+.reviewsWrapper {
+  max-width: 430px;
+}
+.reviewItem:not(:last-child) {
+  margin-bottom: 24px;
+}
+
+.logoNameRatingWrapper {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.logo {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 125%;
+  color: var(--button-E44848);
+  border-radius: 60px;
+  width: 60px;
+  height: 60px;
+  background-color: var(--block-features-F2F4F7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.name {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 133%;
+  color: var(--main-101828);
+}
+.reviewText {
+  line-height: 150%;
+}
