@@ -1,4 +1,26 @@
 .homeSection {
   padding-top: 44px;
   padding-bottom: 44px;
+  height: 90vh;
+  background-image: url("../../assets/images/camper.svg");
+  background-repeat: no-repeat;
+  background-size: 85%;
+  background-position: bottom;
+}
+.homeContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  text-align: center;
+}
+.title {
+  font-size: 56px;
+  text-transform: uppercase;
+}
+.descr {
+  line-height: 150%;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
 }

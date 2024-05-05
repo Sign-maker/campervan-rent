@@ -18,7 +18,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
       <PersistGate loading={null} persistor={persistor}>
         <App />
       </PersistGate>
+      <ToastContainer />
     </Provider>
-    <ToastContainer />
   </React.StrictMode>
 );

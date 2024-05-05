@@ -4,6 +4,8 @@ import { CarList } from "../../components/CarList/CarList";
 import { Button } from "../../components/Button/Button";
 import css from "./Catalog.module.css";
 import { toast } from "react-toastify";
+import { Loader } from "../../components/Loader/Loader";
+import { Empty } from "../../components/Empty/Empty";
 
 const Catalog = () => {
   const { cars, totalPages, fetchCars, resetCars, isLoading } = useCars();
@@ -22,8 +24,9 @@ const Catalog = () => {
             behavior: "smooth",
           });
         }
+        toast.success(`New campers loaded`);
       } catch (error) {
-        toast.error("Ooops.. something went wrong!");
+        toast.error(`Oops.. something went wrong! ${error}`);
       }
     };
 
@@ -53,7 +56,9 @@ const Catalog = () => {
       <div className="container">
         <div className={css.catalog}>
           <h2 className="visually-hidden">Campers catalog</h2>
-          {cars.length > 0 ? <CarList /> : !isLoading && <p>No data</p>}
+          {cars.length > 0 && <CarList />}
+          {isLoading && <Loader />}
+          {!cars.length && <Empty />}
           {loadMore && (
             <div className={css.btnWrapper}>
               <Button
@@ -65,7 +70,6 @@ const Catalog = () => {
               </Button>
             </div>
           )}
-          {isLoading && <p>...Loading Cars</p>}
         </div>
       </div>
     </section>
