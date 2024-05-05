@@ -1,0 +1,1 @@
+import{j as b}from"./index-BuLSGwLY.js";const a="_button_ti0lx_1",c="_loadMoreButton_ti0lx_19",i="_submitButton_ti0lx_46",o={button:a,loadMoreButton:c,submitButton:i},_=({styleType:t="common",loading:n=!1,onClick:s,children:u,type:m="button"})=>b.jsx("button",{disabled:n,className:t!=="common"?o[t]:o.button,type:m,onClick:s,children:u});export{_ as B};
