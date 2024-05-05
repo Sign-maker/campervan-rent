@@ -32,7 +32,7 @@
   /* colors */
   --main-101828: #101828;
   --text-475467: #475467;
-  --button-E44848: #e44848;
+  --button-E44848: #e34747;
   --button-accent-D84343: #d84343;
   --rating-FFC531: #ffc531;
   --block-features-F2F4F7: #f2f4f7;
@@ -112,9 +112,9 @@ nav a.active {
 nav a.active::after {
   content: "";
   position: absolute;
-  bottom: 0;
+  bottom: -2px;
   left: 0;
   width: 100%;
-  height: 1px;
+  height: 4px;
   background-color: var(--button-accent-D84343);
 }

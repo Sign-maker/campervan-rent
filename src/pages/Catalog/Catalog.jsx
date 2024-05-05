@@ -49,15 +49,15 @@ const Catalog = () => {
   };
 
   return (
-    <section>
+    <section className={css.contentSection}>
       <div className="container">
-        <div className={css.content}>
+        <div className={css.catalog}>
           <h2 className="visually-hidden">Campers catalog</h2>
           {cars.length > 0 ? <CarList /> : !isLoading && <p>No data</p>}
           {loadMore && (
             <div className={css.btnWrapper}>
               <Button
-                styleType="loadMore"
+                styleType="loadMoreButton"
                 loading={isLoading}
                 onClick={handleClick}
               >

@@ -1,0 +1,92 @@
+.formWrapper {
+  width: 448px;
+  border-radius: 10px;
+  border: 1px solid rgba(16, 24, 40, 0.2);
+  padding: 24px;
+}
+.formTitle {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 120%;
+  color: var(--main-101828);
+  margin-bottom: 8px;
+}
+
+.text {
+  line-height: 150%;
+  margin-bottom: 24px;
+}
+
+.inputsWrapper {
+  margin-bottom: 24px;
+}
+
+.inputContainer {
+  position: relative;
+}
+
+.inputContainer:not(:last-child) {
+  margin-bottom: 14px;
+}
+
+.input {
+  width: 100%;
+  padding: 18px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background-color: var(--input-F7F7F7);
+  color: var(--main-101828);
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 125%;
+}
+
+.inputError {
+  outline: 1px solid var(--button-E44848);
+}
+
+.input::placeholder {
+  color: rgba(16, 24, 40, 0.6);
+}
+
+.inputError::placeholder {
+  color: rgba(228, 72, 72, 0.2);
+}
+
+.errorMessage {
+  position: absolute;
+  left: 18px;
+  bottom: -12px;
+  font-size: 10px;
+  line-height: 120%;
+  color: var(--button-E44848);
+}
+
+.textarea {
+  display: block;
+  width: 100%;
+  padding: 18px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background-color: var(--input-F7F7F7);
+  color: var(--main-101828);
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 125%;
+  resize: none;
+  min-height: 114px;
+}
+
+.fieldContainer {
+  position: relative;
+}
+.calendarBtn {
+  position: absolute;
+  right: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+}

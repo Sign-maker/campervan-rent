@@ -6,7 +6,7 @@ import css from "./Layout.module.css";
 export const Layout = () => {
   return (
     <>
-      <header className="container">
+      <header className={`container ${css.header}`}>
         <nav className={css.navContainer}>
           <ul className={css.navList}>
             <li>

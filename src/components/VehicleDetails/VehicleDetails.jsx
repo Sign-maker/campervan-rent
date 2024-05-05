@@ -12,7 +12,7 @@ export const VehicleDetails = ({ car }) => {
 
   return (
     <div className={css.wrapper}>
-      <h4 className={css.title}>Vehicle details</h4>
+      <h3 className={css.title}>Vehicle details</h3>
       <ul className={css.list}>
         {itemsToRender.map(({ name, value }, idx) => (
           <li key={idx} className={css.item}>

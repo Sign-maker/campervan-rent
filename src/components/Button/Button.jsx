@@ -5,12 +5,13 @@ export const Button = ({
   loading = false,
   onClick,
   children,
+  type = "button",
 }) => {
   return (
     <button
       disabled={loading}
-      className={styleType === "loadMore" ? css.loadMoreButton : css.button}
-      type="button"
+      className={styleType !== "common" ? css[styleType] : css.button}
+      type={type}
       onClick={onClick}
     >
       {children}

@@ -1,7 +1,12 @@
-.content {
-  width: 888px;
-  padding-bottom: 50px;
+.contentSection {
+  padding-top: 44px;
+  padding-bottom: 44px;
 }
+.catalog {
+  width: 888px;
+  margin: 0 auto;
+}
+
 .btnWrapper {
   padding-top: 50px;
   padding-bottom: 50px;

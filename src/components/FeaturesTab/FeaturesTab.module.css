@@ -1,5 +1,7 @@
-/* .tabWrapper {
-} */
+.tabWrapper {
+  display: flex;
+  gap: 24px;
+}
 .specWrapper {
   max-width: 430px;
 }
