@@ -1,0 +1,1 @@
+import{j as e}from"./index-BWygEn43.js";const o="_homeSection_1rajn_1",s={homeSection:o},n=()=>e.jsx("section",{className:s.homeSection,children:e.jsx("h2",{className:"visually-hidden",children:"Favorite Cars"})});export{n as default};
