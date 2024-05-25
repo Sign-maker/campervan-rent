@@ -3,6 +3,7 @@ import * as Yup from "yup";
 import css from "./BookForm.module.css";
 import { Button } from "../Button/Button";
 import "react-datepicker/dist/react-datepicker.css";
+import { DatePickerField } from "../DatePickerField/DatePickerField";
 
 export const BookForm = () => {
   const yesterday = new Date();
@@ -33,7 +34,7 @@ export const BookForm = () => {
   };
 
   return (
-    <div className={css.formWrapper}>
+    <div className={css.formWrapper} id="bookForm">
       <h3 className={css.formTitle}>Book your campervan now</h3>
       <p className={css.text}>
         Stay connected! We are always ready to help you.
@@ -46,6 +47,7 @@ export const BookForm = () => {
       >
         {(formik) => (
           <Form autoComplete="off">
+            {console.log(formik)}
             <div className={css.inputsWrapper}>
               <div className={css.inputContainer}>
                 <label className={css.label} htmlFor="name"></label>
@@ -85,33 +87,11 @@ export const BookForm = () => {
                   className={css.errorMessage}
                 />
               </div>
-              <div className={css.inputContainer}>
-                <label className={css.label} htmlFor="bookingDate"></label>
-
-                <div className={css.fieldContainer}>
-                  <Field
-                    className={`${css.input} ${
-                      formik.errors.bookingDate && formik.touched.bookingDate
-                        ? css.inputError
-                        : ""
-                    }`}
-                    type="date"
-                    id="bookingDate"
-                    name="bookingDate"
-                    placeholder="Booking date"
-                  />
-
-                  {/* <div className={css.calendarBtn} type="button">
-                    <Icon iconName="icon-calendar" />
-                  </div> */}
-                </div>
-
-                <ErrorMessage
-                  name="bookingDate"
-                  component="div"
-                  className={css.errorMessage}
-                />
-              </div>
+              <DatePickerField
+                name="bookingDate"
+                id="bookingDate"
+                placeholderText="Booking date"
+              />
               <div className={css.inputContainer}>
                 <label className={css.label} htmlFor="comment"></label>
                 <Field
